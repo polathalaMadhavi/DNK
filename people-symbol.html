@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            background:rgb(229, 229, 244);
+            height:100vh;
+        }
+        .reg{
+            margin:auto;
+            text-align: center;
+            align-items: center;
+        
+        }
+        .reg img{
+            width:150px;
+            height:150px;
+            border:1px solid ;
+            align-items: center;
+            margin:auto;
+            margin-top:10%;
+        
+        }
+        .details{
+            margin:40px;
+            font-size:20px;
+            background:#fff;
+            width:300px;
+            margin:auto;
+            margin-top:40px;
+            text-align: center;
+            align-items: center;
+
+        }
+        .details input,.details label{
+            margin:10px;
+            margin-bottom:20px ;
+            padding:8px 20px;
+        }
+        .details button{
+            padding:5px 12px;
+            margin-bottom: 20px;
+        }
+        .recover a{
+            text-decoration: none;
+           
+        }
+        .message{
+          height:50px; 
+            margin:auto;
+           color:blue;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="reg">
+            <img src="">
+            <div class="details">
+                
+                <label>Username or Email Address</label><br>
+                <input type="email" class="email"><br>
+                <label>Password</label><br>
+                <input type="password"  class="pdwd"><br>
+                <input type="checkbox"><label >Remember Me</label><br>
+                <button class="log" type="submit">Log In</button>
+                <p class="message"></p>
+            </div>
+            <div class="recover">
+                <br>
+                <a href="">Lost your password?</a><br><br>
+                <a href="">Go to Brandstore</a>
+            </div>
+        </div>
+    </form>
+    <script>
+        const msg=document.querySelector(".message");
+        const passwd=document.querySelector(".pdwd");
+        const logbtn=document.querySelector(".log");
+        const mail=document.querySelector(".email");
+        logbtn.addEventListener("click",check);
+        var attempt=0;
+        function check(event){
+            event.preventDefault();
+            
+            const uppercaseRegexp=/[A-Z]/;
+            const lowercaseRegexp=/[a-z]/;
+            const numericRegexp=/[0-9]/;
+           // const emailFormat=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          /* if(attempt >=3){
+            msg.textContent="maximum attempts reached";
+            logbtn.disabled=true;
+
+           }*/
+            if(passwd.value===""&& mail.value===""){
+                msg.textContent ="enter username and  password";
+                //attempt++;
+            } 
+            else if(passwd.value.length < 8){
+                msg.textContent="password length atleat 8 chars";
+               // attempt++;
+               // return;
+            }
+            else if(!uppercaseRegexp.test(passwd.value)){
+                msg.textContent="password must contain atleast one uppercase";
+               // attempt++;
+                //return;
+            }
+            else if(!lowercaseRegexp.test(passwd.value)){
+                msg.textContent="password must contain atleast one lowercase";
+               // attempt++;
+               // return;
+            }
+            else if(!numericRegexp.test(passwd.value)){
+                msg.textContent="passwors must contain atlese ont numeric";
+               // attempt++;
+            } 
+            else{
+            msg.textContent="valid";  
+            } 
+        }  
+        msg.textContent.clear();
+    </script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dnk.css">
+</head>
+<body>
+    <section class="header">
+        <div class="nav-bar">
+           <div class="nav-list">
+                <img  class="logo" src="logo@2x-free-img.png" ></a>
+
+               <div class="nav-left">
+                    <a href="#">Everything</a>
+                    <a href="#">women</a>
+                    <a href="#">men</a>
+                    <a href="#">accessories</a>
+                </div>
+                <div class="nav-right">
+                    <a href="#">about</a>
+                    <a href="#">contact us</a> 
+                </div>    
+                <div class="last">
+                     <a href="#">$0.00</a>   
+                    <a href="#"><i class="fa-solid fa-bags-shopping" ></i></a>
+                    <a href="#"><i class="fa-solid fa-user"></i></a>
+                    <a href="#"><i class="fa-solid fa-bars"></i></a>
+                </div>
+                
+            </div>
+        
+    </div>        
+</section>
+<section class="bn">
+    <div class="bnr">
+        <h1>Contact Us</h1>
+    </div>
+    <div class="bg">
+        <div class="head">
+        <h6>Have any queries</h6>
+        <h4>We're here to help</h4>
+        </div>
+        <div class="help">
+            <div class="sales">
+                <h4>Sales</h4>
+                 <p>Vestibulum ante ipsum primis in faucibus orci luctus.</p>
+                <strong>1800 123 4567</strong>
+            </div>
+            <div class="sales">
+                <h4>Complaints</h4>
+                <p>Vestibulum ante ipsum primis in faucibus orci luctus.</p>
+             <strong>1900 223 8899</strong>
+            </div>
+            <div class="sales">
+                 <h4>Returns</h4>
+                 <p>Vestibulum ante ipsum primis in faucibus orci luctus.</p>
+                <strong>[email protected]</strong>
+            </div>
+            <div class="sales">
+                <h4>Marketing</h4>
+                <p>Vestibulum ante ipsum primis in faucibus orci luctus.</p>
+                <strong>1700 444 5578</strong>
+            </div>
+         </div>
+    </div>
+</section>
+<section class="form">
+    <div class="info">
+        <h6>Don't be a stranger!</h6>
+        <h3>You tell us. We listen</h3>
+         <p>Cras elementum finibus lacus nec lacinia. Quisque non convallis nisl, eu condimentum sem. Proin dignissim libero lacus, ut eleifend magna vehicula et. Nam mattis est sed tellus.</p>
+    </div>
+    <div class="reg-like">
+        <input type="text" value="NAME" required>
+        <input type="text" value="SUBJECT" required>
+        <input type="email" value="EMAIL" required>
+        <textarea value="MESSAGE" rows="5" cols="40" required>MESSAGE</textarea><br>
+        <button class="msg">SEND MESSAGE</button>
+    </div>
+</section>
+    
+<section class="footer">
+    <h1>sale up to 70% off for all clothes & fashion items,on all brands.</h1>
+    <div class="final">
+    <div class="foot">
+        <img src="logo@2x-free-img.png" style="width:100px;">
+        <h3>The best look anytime,anywhere.</h3>
+    </div>
+    <div class="for-her">
+        <h3>For Her</h3>
+        <p>Women Jeans</p>
+        <p>Tops and Shirts</p>
+        <p>Women Jackets</p>
+        <p>heels and Flats</p>
+        <p>Women Accessories</p>
+    </div>
+    <div class="for-him">
+        <h3>for-him</h3>
+        <p>Men Jeans</p>
+        <p>Men Shirts</p>
+        <p>Men Shoes</p>
+        <p>Men Accessories</p>
+        <p>Men Jackets</p>
+    </div>
+    <div class="Subscribe">
+        <h3>Subscribe</h3>
+        <input type="mail" class="email"  required="required" placeholder="enter your mail"><br>
+        <button class="subscribe" onClick="checkValid()" type="subscribe">SUBSCRIBE</button>
+    </div>
+    
+    <div class="copyright">
+    <p><a href="Copyright@ 2023 Brandstore"></a>Copyright@ 2023 Brandstore</p>
+    <p>Powered by Brandstore</p>
+      <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-solid fa-phone"></i>
+        <i class="fa-solid fa-envelope"></i>
+    </div>    
+ 
+    </div>
+</section>
+<script>
+     genlogo();
+setInterval(genlogo,2000);
+function checkValid(){        
+const email=document.querySelector(".email");
+const mail=email.value;
+if(isValidEmail(mail)){
+alert("valid");
+}
+else{
+alert("not valid");
+}
+
+}
+function isValidEmail(mail){
+var exp=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+return exp.test(mail);
+}
+</script>
+</body>
+</html>
